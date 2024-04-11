@@ -1,0 +1,259 @@
+
+body {
+    overflow: hidden;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: serif;
+    color: black;
+    font-size: 70px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.icecream {
+    width: 200px;
+    height: 440px;
+    left: 40%;
+    top: 50%;
+    margin-top: -220px;
+    margin-left: 100px;
+    position: absolute;
+}
+
+.icecream .head {
+    width: 100%;
+    height: 310px;
+    border-radius: 100px 100px 0px 30px;
+    background: #ffb0a6;
+}
+
+.icecream .head .bite {
+    width: 40px;
+    height: 50px;
+    background: #ffc5d9;
+    position: absolute;
+    left: 20%;
+    top: -5px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.icecream .head .bite:nth-child(2) {
+    left: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.icecream .head.stripcontainer {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    height: 140px;
+    width: 114px;
+    margin-left: -57px;
+
+}
+
+.icecream .head .stripcontainer .strip {
+    float: left;
+    background: #ff998d;
+    height: 150px;
+    width: 40px;
+    border-radius: 100px;
+    margin-top: 80px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.icecream .head .stripcontainer .strip:last-child {
+    float: right;
+}
+
+.icecream .head .eyes {
+    width: 80px;
+    height: 12px;
+    font-size: 70px;
+    background: transparent;
+    position: absolute;
+    top: 55%;
+    margin-left: -55px;
+    left: 50%;
+}
+
+.icecream .head .eyes .eye {
+    width: 12px;
+    height: 100%;
+    background: #ef988f;
+    animation: blink 3s infinite linear;
+    float: left;
+}
+
+.icecream .head .eyes :last-child {
+    float: right;
+    margin-right: -33px;
+}
+
+
+
+.icecream .head .mouth {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    top: 60%;
+    left: 50%;
+    margin-left: -20px;
+    border-radius: 0 0 100px 100px;
+    overflow: hidden;
+    background: #ef988f;
+}
+
+.icecream.head .mouth .tongue {
+    position: absolute;
+    width: 80%;
+    height: 40%;
+    top: 8px;
+    left: 50%;
+    margin-left: -40px;
+    border-radius: 100px 100px 0 0;
+    background: #fec3bb;
+}
+
+
+.icecream .head .meltcontainer {
+    position: absolute;
+    right: 0;
+    bottom: 26.1%;
+    width: 56px;
+    height: 15px;
+    background: #ffb0a6;
+}
+
+.icecream .head .meltcontainer .drip {
+    float: left;
+    width: 14px;
+    height: 55px;
+    background: #ffb0a6;
+    border-radius: 0 0 100px 100px;
+}
+
+.icecream .head .meltcontainer .drip:nth-child(1) {
+    background: #fff;
+    border-radius: 0 100px 0 0;
+}
+
+.icecream .head .meltcontainer .drip:nth-child(2):before,
+.icecream .head .meltcontainer .drip:nth-child(4):before {
+    position: absolute;
+    top: 10px;
+    content: "";
+    background: #ffb0a6;
+    animation: drop 3s infinite linear;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+}
+
+.icecream .head .meltcontainer .drip:nth-child(4):before {
+    animation-delay: 1.5s;
+}
+
+.icecream .head .meltcontainer .drip:nth-child(3) {
+    margin-top: 8px;
+    height: 100%;
+    border-radius: 100px 100px 0 0;
+    background: #fff;
+}
+
+.icecream .head .meltcontainer .drip:last-child {
+    height: 25px;
+    float: right;
+}
+
+.icecream .stick {
+    width: 34px;
+    height: 120px;
+    background: #fcd6ad;
+    margin-left: -17px;
+    border-radius: 0 0 30px 30px;
+    position: relative;
+    left: 50%;
+    z-index: 1;
+}
+
+.icecream .stick:before {
+    content: '';
+    width: 100%;
+    height: 14px;
+    background: #efcba4;
+    position: absolute;
+}
+
+.icecream .shadow {
+    height: 25px;
+    left: 50%;
+    margin-top: -15px;
+    border-radius: 50%;
+    position: absolute;
+    width: 76px;
+    background: #e7e7e6;
+    margin-left: -38px;
+}
+
+.icecream .puddle {
+    left: 76%;
+    position: absolute;
+    width: 55px;
+    margin-top: -15px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ffb0a6;
+    animation: puddle 1.5s infinite linear;
+    animation-delay: 2.4s;
+}
+
+@keyframes blink {
+
+    0%,
+    88%,
+    94%,
+    100% {
+        height: 12px;
+        margin-top: 0;
+    }
+    91%,97%{
+        height: 0;
+        margin-top: 6px;
+    }
+}
+
+@keyframes drop {
+
+    0%,
+    65% {
+        top: 10%;
+    }
+
+    100% {
+        top: 105px;
+    }
+}
+
+@keyframes puddle {
+
+    0%,
+    30%,
+    60% {
+        width: 55px;
+        left: 76%;
+    }
+
+    40% {
+        width: 60px;
+        left: 75%;
+    }
+}
